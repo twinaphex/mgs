@@ -1,0 +1,46 @@
+# Project Config
+#-------------------------
+.vscode
+.vs
+
+# PSX Binaries
+#-------------------------
+*.[Oo]
+*.[Aa]
+*.[Oo][Bb][Jj]
+*.[Ll][Ii][Bb]
+
+*.[Bb][Ii][Nn]
+*.[Cc][Pp][Ee]
+*.[Ee][Xx][Ee]
+
+*.[Ll][Nn][Kk]
+*.[Mm][Aa][Pp]
+*.[Ss][Yy][Mm]
+
+# IDA Database
+#-------------------------
+*.i64
+*.id[0-9]
+*.idb
+*.nam
+*.til
+
+# GCL Bytecode
+#-------------------------
+*.[Gg][Cc][Xx]
+
+# Win32 Project
+#-------------------------
+msgi/
+
+# Excludes
+#-------------------------
+backup/
+disasm/*/*
+work/cdrom.img/*
+
+# Includes
+#-------------------------
+!disasm/*/.md5sum
+!work/cdrom.img/hostpath
