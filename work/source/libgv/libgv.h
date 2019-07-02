@@ -4,7 +4,7 @@
 #include "mgs_defs.h"
 #include "mgs_types.h"
 
-/* strcode.c */
+/* String Hash Function (strcode.c) */
 extern u_short GV_StrCode( char *string );
 
 #endif // INC_LIBGV_H
