@@ -2,7 +2,7 @@
 #define INC_MGS_DEFS_H
 
 /* build requirements */
-#include "builddefs.h"
+#include "buildconf.h"
 
 #endif // INC_MGS_DEFS_H
 
