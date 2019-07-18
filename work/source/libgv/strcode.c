@@ -23,19 +23,19 @@
  *      GV_StrCode( "op_kcej_r" ) == 0x434F
  */
 
-/* status: NOMATCH, opt: -O2, instr: good, regs: bad */
+/* status: MATCH, opt: -O2, instr: OK, regs: OK */
 u_short GV_StrCode( char *string )
 {
 	u_char c;
-	u_int id = 0;
+	u_char *p = (u_char *)string;
+	u_short id = 0;
 	
-	while ( c = *string++ )
+	while ( c = *p++ )
 	{
-		id &= 0xFFFF;
 		id = (( id >> 11 ) | ( id << 5 ));
 		id += c;
 	}
-	return id; // implicit &= 0xFFFF
+	return id;
 }
 
 /* vim: set noet ts=4 sw=4 ff=dos fenc=euc-jp: */
