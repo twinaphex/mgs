@@ -1,5 +1,5 @@
-#ifndef INC_CMTYPES_H_DEF
-#define INC_CMTYPES_H_DEF
+#ifndef INC_CMTYPES_DEF_H
+#define INC_CMTYPES_DEF_H
 
 /* 8-bit */
 #define byte     char
@@ -103,4 +103,4 @@ typedef union union128 {
 	float64  f64[2];
 } union128;
 
-#endif /* INC_CMTYPES_H_DEF */
+#endif /* INC_CMTYPES_DEF_H */
