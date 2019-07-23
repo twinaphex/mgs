@@ -1,25 +1,19 @@
 #ifndef INC_CMTYPES_DEF_H
 #define INC_CMTYPES_DEF_H
 
-/* 8-bit */
+/*----- Unspecified Sign -----*/
 #define byte     char
 #define int8     char
 #define char8    char
-
-/* 16-bit */
 #define int16    short
 #define short16  short
-
-/* 32-bit */
 #define int32    int
 #define long32   int
-
-/* 64-bit */
 #define llong    long long
 #define int64    long long
 #define long64   long long
 
-/* basic */
+/*----- Unspecified Width -----*/
 typedef   signed char       sbyte,  s_byte;
 typedef unsigned char       ubyte,  u_byte;
 typedef   signed char       schar,  s_char;
@@ -33,7 +27,7 @@ typedef unsigned long       ulong,  u_long;
 typedef   signed long long  sllong, s_llong;
 typedef unsigned long long  ullong, u_llong;
 
-/* size-specific */
+/*----- Specified Width -----*/
 typedef   signed char       sint8,  s_int8,  s8,  schar8,   s_char8;
 typedef unsigned char       uint8,  u_int8,  u8,  uchar8,   u_char8;
 typedef   signed short      sint16, s_int16, s16, sshort16, s_short16;
@@ -46,11 +40,11 @@ typedef unsigned long long  uint64, u_int64, u64, ulong64,  u_long64;
 typedef float   float32, f32;
 typedef double  float64, f64;
 
-/* fake boolean */
-typedef int8   bool8;
-typedef int16  bool16;
-typedef int32  bool32;
-typedef int64  bool64;
+/*----- Fake Boolean -----*/
+#define bool8  int8
+#define bool16 int16
+#define bool32 int32
+#define bool64 int64
 
 #ifndef TRUE
 #define TRUE  (1)
@@ -59,7 +53,7 @@ typedef int64  bool64;
 #define FALSE (0)
 #endif
 
-/* union */
+/*----- Common Union -----*/
 typedef union union16 {
 	s_int16 s16;
 	u_int16 u16;
