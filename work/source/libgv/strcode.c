@@ -12,7 +12,7 @@
  * Behavior:
  * - Passing an empty string will return zero.
  * - Passing a single-char string will return the value of the char.
- * - Permutations of strings differing in only the last character will
+ * - Mutations of strings differing in only the last character will
  *   result in the lowest byte of the hash mirroring that difference.
  *
  *   Examples:
