@@ -3,14 +3,16 @@
 
 /*----- Unspecified Sign -----*/
 #define byte     char
-#define int8     char
-#define char8    char
-#define int16    short
-#define short16  short
-#define int32    int
-#define long32   int
 #define llong    long long
+
+#define int8     char
+#define int16    short
+#define int32    int
 #define int64    long long
+
+#define char8    char
+#define short16  short
+#define long32   int
 #define long64   long long
 
 /*----- Unspecified Width -----*/
