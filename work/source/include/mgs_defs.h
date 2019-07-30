@@ -1,8 +1,7 @@
 #ifndef INC_MGS_DEFS_H
 #define INC_MGS_DEFS_H
 
-/* build requirements */
-#include "buildconf.h"
+
 
 #endif // INC_MGS_DEFS_H
 

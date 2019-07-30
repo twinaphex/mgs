@@ -1,8 +1,7 @@
 #ifndef INC_LIBGV_H
 #define INC_LIBGV_H
 
-#include "mgs_defs.h"
-#include "mgs_types.h"
+#include "mgs_global.h"
 
 /* String Hash Function (strcode.c) */
 extern u_short GV_StrCode( char *string );

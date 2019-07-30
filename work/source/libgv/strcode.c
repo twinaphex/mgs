@@ -1,8 +1,7 @@
 /*
- *  String Hash Function
+ * String Hash Function
  */
-#include "mgs_defs.h"
-#include "mgs_types.h"
+#include "mgs_global.h"
 
 /*
  * Warning:
@@ -23,7 +22,7 @@
  *      GV_StrCode( "op_kcej_r" ) == 0x434F
  */
 
-/* status: MATCH, opt: -O2, instr: OK, regs: OK */
+/* status: MATCH, opt: -O2, inst: OK, regs: OK */
 u_short GV_StrCode( char *string )
 {
 	u_char c;

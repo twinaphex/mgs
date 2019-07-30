@@ -1,9 +1,8 @@
 /*
- *  METAL GEAR SOLID
- *  Startup Module
+ * METAL GEAR SOLID
+ * Startup Module
  */
-#include "mgs_defs.h"
-#include "mgs_types.h"
+#include "mgs_global.h"
 #include "mts.h"
 #include "taskid.h"
 
@@ -15,7 +14,7 @@ static inline void START_GAME( void(*proc)(void) )
 {
 	static long32 Stack[512];
 	
-	mts_boot_task( MTSID_GAME, proc, bottom( Stack ), sizeof(Stack) );
+	mts_boot_task( MTSID_GAME, proc, bottom(Stack), sizeof(Stack) );
 }
 
 static void MGS_Main( void )
