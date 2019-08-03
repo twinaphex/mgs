@@ -3,7 +3,7 @@
 
 Generated using [richprint](https://github.com/dishather/richprint/).
 
-## Jul.12,2000 Build
+## Aug.28,2000 Build
 
 - ``MGS_Work___Win32_Integral``
 
