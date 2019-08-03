@@ -4,9 +4,9 @@
 /*----- Build Requirements -----*/
 #include "buildconf.h"
 
-/*----- Type Definitions -----*/
-#include <sys/types.h>
-#include "cmtypes_def.h"
+/*----- KCEJ Definitions -----*/
+#include "kcej_defs.h"
+#include "kcej_types.h"
 
 #endif // INC_KCEJ_GLOBAL_H
 
