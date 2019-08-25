@@ -37,4 +37,5 @@ u_short GV_StrCode( char *string )
 	return id;
 }
 
-/* vim: set noet ts=4 sw=4 ff=dos fenc=euc-jp: */
+/* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
+/* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
