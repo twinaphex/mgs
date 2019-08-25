@@ -2,12 +2,14 @@
 #define INC_BUILDCONF_H
 
 /*
- * You must pass a configuration flag to the preprocessor when building the project.
+ * One build flag must be passed to the C preprocessor when building the project.
  * See the project documentation for the default configuration if you are unsure.
- * ONLY ONE CONFIGURATION MAY BE DEFINED AT BUILD TIME!!
+ * ---------- ONLY ONE CONFIGURATION MAY BE DEFINED AT BUILD TIME!! ----------
  */
 
-/*---------- Alias ----------*/
+/*---------------------------------------------------------------------------*
+ * Alias Definition
+ *---------------------------------------------------------------------------*/
 
 /* NTSC */
 #define MGS_JPN             BUILD_SLPM86111     // Jul.24,1998
@@ -50,8 +52,9 @@
 #define MGS4_SP             BUILD_MGS4_SP // Nov.28,2007 mgs/stage/module/sp.self
 #define MGS4_US             BUILD_MGS4_US // Nov.28,2007 mgs/stage/module/us.self
 
-/*---------- Check ----------*/
-
+/*---------------------------------------------------------------------------*
+ * Definition Check
+ *---------------------------------------------------------------------------*/
 #if (( BUILD_SLPM86111 \
      + BUILD_SLUS00594_v10 \
      + BUILD_SLUS00594_v11 \
@@ -72,6 +75,9 @@
      + BUILD_SLUS00957 \
      + BUILD_SLUS90062 \
      + BUILD_SLES02136 \
+     + BUILD_MGS_WIN32_INTEGRAL \
+     + BUILD_MGS_WIN32_VRONLY \
+     + BUILD_MGS_WIN32_DEMO0 \
      + BUILD_MGS4_FR \
      + BUILD_MGS4_GR \
      + BUILD_MGS4_IT \
@@ -101,6 +107,9 @@
      + BUILD_SLUS00957 \
      + BUILD_SLUS90062 \
      + BUILD_SLES02136 \
+     + BUILD_MGS_WIN32_INTEGRAL \
+     + BUILD_MGS_WIN32_VRONLY \
+     + BUILD_MGS_WIN32_DEMO0 \
      + BUILD_MGS4_FR \
      + BUILD_MGS4_GR \
      + BUILD_MGS4_IT \
@@ -110,4 +119,7 @@
 #error "No config flag was defined!!"
 #endif
 
+/*---------------------------------------------------------------------------*
+ * END OF FILE
+ *---------------------------------------------------------------------------*/
 #endif // INC_BUILDCONF_H
