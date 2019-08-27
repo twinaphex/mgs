@@ -9,7 +9,7 @@
 #include "mgs_global.h"
 
 /*---------------------------------------------------------------------------*
- * GCL Structures (ref.Memory Leaks, MGS4 Symbols)
+ * GCL Structures (ref.SLPM86249:vr_fms01.bin, MGS4)
  *---------------------------------------------------------------------------*/
 
 typedef int GCL_COMMANDFUNC(char *);
@@ -31,8 +31,10 @@ typedef struct {
 } GCL_ARGS;
 
 /*---------------------------------------------------------------------------*
- * Endianness Conversion (ref.Memory Leaks)
+ * Endianness Conversion (ref.SLPM86249:vr_fms01.bin)
  *---------------------------------------------------------------------------*/
+
+/****** MEMLEAK START ******/
 
 static inline long GCL_GetLong( char *ptr )
 {
@@ -52,6 +54,8 @@ static inline char GCL_GetByte( char *ptr )
 {
 	return *ptr;
 }
+
+/****** MEMLEAK END ******/
 
 /*---------------------------------------------------------------------------*
  * END OF FILE
