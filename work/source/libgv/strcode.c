@@ -1,4 +1,5 @@
 /*
+ * [ LibGV ]
  * String Hash Function
  */
 #include "mgs_global.h"
