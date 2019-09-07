@@ -4,7 +4,7 @@
 /*
  * One build flag must be passed to the C preprocessor when building the project.
  * See the project documentation for the default configuration if you are unsure.
- * ---------- ONLY ONE CONFIGURATION MAY BE DEFINED AT BUILD TIME!! ----------
+ * ********** ONLY ONE CONFIGURATION MAY BE DEFINED AT BUILD TIME!! **********
  */
 
 /*---------------------------------------------------------------------------*
