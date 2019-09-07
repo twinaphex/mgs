@@ -1,15 +1,12 @@
 /*
- *  New Multi-Task Scheduler for PSX
+ * New Multi-Task Scheduler for PSX
+ * Global Incldue
  *
- *  Author : Kazunobu Uehara, Hiroki Honda ... Policenauts
- *           Kazunobu Uehara               ... Metal Gear Solid
- *           Taisei Nomura                 ... beatmania Append 4th/5thMix
- *
- *  Source : D:\home\nomura-t\BM_Work\5thMix\lib_work\INCLUDE\MTS.H
- *  Ref.   : C:\5thMix\work.5th\include\mts.h
+ * ref. beatmania APPEND 5thMIX
+ *  1999.10.04 : work.5th/include/mts.h
  */
-#ifndef MTS_H_INCLUDED
-#define MTS_H_INCLUDED
+#ifndef INC_MTS_H
+#define INC_MTS_H
 
 #define NEWMTS 1
 
@@ -18,8 +15,8 @@
 #define MTS_NR_TASK  64
 #else
 #define MTS_NR_TASK  12
-#endif // NEWMTS
-#endif // MTS_NR_TASK
+#endif /* NEWMTS */
+#endif /* MTS_NR_TASK */
 
 #ifndef MTS_NR_INIT_TASK
 #define MTS_NR_INIT_TASK  8 /* use V-Sync interrupt */
@@ -42,8 +39,8 @@
 #define MTS_STANDARD_STACK_TOP   (MTS_STANDARD_STACK_SIZE)
 
 typedef unsigned long MTS_STACK;
-#define STACK_AREA(name, size)    name[(size)/sizeof(MTS_STACK)]
-#define STACK_BOTTOM(name, size)  ((char*)name+size)
+#define STACK_AREA( name, size )    name[(size) / sizeof(MTS_STACK)]
+#define STACK_BOTTOM( name, size )  ((char *)name + size)
 
 extern void mts_boot( int tasknr, void (*procedure)(void), void *stack_pointer );
 extern void mts_send( int dst, unsigned char *message );
@@ -52,7 +49,7 @@ extern int  mts_isend( int dst );
 extern int  mts_receive( int src, unsigned char *message );
 extern void mts_reschedule( void );
 
-#if 0 // unused functions
+#if 0 /* UNUSED */
 extern void mts_lock( void );
 extern void mts_unlock( void );
 #else
@@ -83,12 +80,12 @@ extern void mts_check_memmap( void );
 extern void mts_get_use_stack_size( long *max, long *now, long *limit );
 #else
 #define mts_print_process_status()
-#define mts_set_stack_check(a, b, c)
-#define mts_set_exception_func(a)
+#define mts_set_stack_check( a, b, c )
+#define mts_set_exception_func( a )
 #define mts_print_memmap()
 #define mts_check_memmap()
 #define mts_get_use_stack_size()
-#endif // DEBUG
+#endif /* DEBUG */
 
 enum {
 	MTS_TASK_DEAD,
@@ -121,7 +118,7 @@ extern int  mts_recv_msg( int src, int *data0, int *data1 );
 
 extern void mts_boot_task( int tasknr, void (*procedure)(void), void *stack_pointer, long stack_size );
 
-#else // DEBUG
+#else /* DEBUG */
 
 #define mts_start_task( _tasknr, _procedure, _stack_pointer, _stack_size )\
            mts_sta_tsk( _tasknr, _procedure, _stack_pointer )
@@ -129,10 +126,10 @@ extern void mts_boot_task( int tasknr, void (*procedure)(void), void *stack_poin
 #define mts_boot_task( _tasknr, _procedure, _stack_pointer, _stack_size )\
              mts_boot( _tasknr, _procedure, _stack_pointer )
 
-#endif // DEBUG
+#endif /* DEBUG */
 
 /* for UNIX signal stuff (cf. mts_lock()/mts_unlock()) */
-extern void mts_set_interrupt_callback(void (*callback1)(int), void (*callback2)(int));
+extern void mts_set_interrupt_callback( void (*callback1)(int), void (*callback2)(int) );
 
 /* for PSX V-Sync Interrupt */
 
@@ -174,7 +171,7 @@ extern void *mts_memory_check( char *file, long line, void *ptr );
 #define MTS_SET_MEMORY_FENCE_ARRAY( _blocktop, _blocksize )
 #define MTS_MEMORY_CHECK( _ptr )
 
-#endif // DEBUG
+#endif /* DEBUG */
 
 /* Controller Service */
 
@@ -230,13 +227,19 @@ void set_output_stream( long stream );
 #define sio_output_start()  set_output_stream( 0 );
 
 #ifdef PSX
+/* MTS printf functions */
 void fprintf( long stream, char *format, ... );
-#endif // PSX
+void printf( char *format, ... );
+void cprintf( char *format, ... );
+#endif /* PSX */
 
-#endif // __IN_MTS_NEW__
+#endif /* __IN_MTS_NEW__ */
 
 #ifdef PSX
 #define stderr -1
-#endif // PSX
+#endif /* PSX */
 
-#endif // MTS_H_INCLUDED
+#endif /* INC_MTS_H */
+
+/* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
+/* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
