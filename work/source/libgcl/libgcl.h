@@ -1,7 +1,9 @@
 /*
+ * [ LibGCL ]
  * Game Command Language
  * Script Interpreter Library
- * for METAL GEAR SOLID
+ *
+ * ver.METAL GEAR SOLID
  */
 #ifndef INC_LIBGCL_H
 #define INC_LIBGCL_H
@@ -58,9 +60,16 @@ static inline char GCL_GetByte( char *ptr )
 /****** MEMLEAK END ******/
 
 /*---------------------------------------------------------------------------*
+ * Prototypes
+ *---------------------------------------------------------------------------*/
+
+/* GCL Daemon (gcl_init.c) */
+void GCL_StartDaemon( void );
+
+/*---------------------------------------------------------------------------*
  * END OF FILE
  *---------------------------------------------------------------------------*/
-#endif // INC_LIBGCL_H
+#endif /* INC_LIBGCL_H */
 
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
 /* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
