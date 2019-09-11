@@ -84,6 +84,9 @@ static void Main( void )
 
 void main( void )
 {
+#if ( MGS_PILOT_DISC1 )
+	printf( "start MGS\n" );
+#endif
 	START_GAME( Main );
 }
 
