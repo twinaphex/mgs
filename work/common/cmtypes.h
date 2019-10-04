@@ -1,85 +1,56 @@
+/*
+ *【CM Library】by J.Ingram
+ * Common Type Definitions
+ */
 #ifndef INC_CMTYPES_H
 #define INC_CMTYPES_H
 
-/*---------------------------------------------------------------------------*
- * Platform Configuration
- *---------------------------------------------------------------------------*/
-#if defined( __GNUC__ )
+#include "cmconf.h"
 
-#if defined( __i686__ )\
- || defined( __x86_64__ )
-#define HASTYPE_FLOAT128
-#endif /* (ARCH) */
-
-#if defined( __i686__ )
-#define HASTYPE_FLOAT96
-#endif /* (ARCH) */
-
-#if defined( __x86_64__ )\
- || defined( __ee__ )  /* PS2 Emotion Engine */\
- || defined( __psp__ ) /* PSP Allegrex       */\
- || defined( __PPU__ ) /* PS3 Cell/B.E. PPU  */\
- || defined( __SPU__ ) /* PS3 Cell/B.E. SPU  */
-#define HASTYPE_INT128
-#endif /* (ARCH) */
-
-#endif /* __GNUC__ */
-
-/*---------------------------------------------------------------------------*
- * Conflict Check
- *---------------------------------------------------------------------------*/
-#if defined( __psp__ )
-#if defined( _SCE_PSPTYPES_H )\
- && !defined( SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE )
-#error "psptypes.h was included before conflict suppression!!"
-#else /* _SCE_PSPTYPES_H && !SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE */
-#ifndef SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE
-#define SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE
-#endif /* SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE */
-#endif /* _SCE_PSPTYPES_H && !SCE_PSPTYPES_SUPPRESS_ADDITIONAL_DEFINE */
-#endif /* __psp__ */
+#define CM_TYPE_INT8   char
+#define CM_TYPE_INT16  short
+#define CM_TYPE_INT32  int
+#define CM_TYPE_INT64  long long
 
 /*---------------------------------------------------------------------------*
  * Common Types w/ Unspecified Sign
  *---------------------------------------------------------------------------*/
 #ifndef byte
-#define byte     char
+#define byte     CM_TYPE_INT8
 #endif
 #ifndef llong
 #define llong    long long
 #endif
 
 #ifndef int8
-#define int8     char
+#define int8     CM_TYPE_INT8
 #endif
 #ifndef int16
-#define int16    short
+#define int16    CM_TYPE_INT16
 #endif
 #ifndef int32
-#define int32    int
+#define int32    CM_TYPE_INT32
 #endif
 #ifndef int64
-#define int64    long long
+#define int64    CM_TYPE_INT64
 #endif
 
 #ifndef char8
-#define char8    char
+#define char8    CM_TYPE_INT8
 #endif
 #ifndef short16
-#define short16  short
+#define short16  CM_TYPE_INT16
 #endif
 #ifndef long32
-#define long32   int
+#define long32   CM_TYPE_INT32
 #endif
 #ifndef long64
-#define long64   long long
+#define long64   CM_TYPE_INT64
 #endif
 
 /*---------------------------------------------------------------------------*
  * Common Types w/ Unspecified Width
  *---------------------------------------------------------------------------*/
-typedef   signed char       sbyte,  s_byte;
-typedef unsigned char       ubyte,  u_byte;
 typedef   signed char       schar,  s_char;
 typedef unsigned char       uchar,  u_char;
 typedef   signed short      sshort, s_short;
@@ -94,14 +65,26 @@ typedef unsigned long long  ullong, u_llong;
 /*---------------------------------------------------------------------------*
  * Common Types w/ Specified Width
  *---------------------------------------------------------------------------*/
-typedef   signed int8       sint8,  s_int8,  s8,  schar8,   s_char8;
-typedef unsigned int8       uint8,  u_int8,  u8,  uchar8,   u_char8;
-typedef   signed int16      sint16, s_int16, s16, sshort16, s_short16;
-typedef unsigned int16      uint16, u_int16, u16, ushort16, u_short16;
-typedef   signed int32      sint32, s_int32, s32, slong32,  s_long32;
-typedef unsigned int32      uint32, u_int32, u32, ulong32,  u_long32;
-typedef   signed int64      sint64, s_int64, s64, slong64,  s_long64;
-typedef unsigned int64      uint64, u_int64, u64, ulong64,  u_long64;
+typedef   signed CM_TYPE_INT8   sbyte,  s_byte;
+typedef unsigned CM_TYPE_INT8   ubyte,  u_byte;
+
+typedef   signed CM_TYPE_INT8   sint8,  s_int8,  s8;
+typedef unsigned CM_TYPE_INT8   uint8,  u_int8,  u8;
+typedef   signed CM_TYPE_INT16  sint16, s_int16, s16;
+typedef unsigned CM_TYPE_INT16  uint16, u_int16, u16;
+typedef   signed CM_TYPE_INT32  sint32, s_int32, s32;
+typedef unsigned CM_TYPE_INT32  uint32, u_int32, u32;
+typedef   signed CM_TYPE_INT64  sint64, s_int64, s64;
+typedef unsigned CM_TYPE_INT64  uint64, u_int64, u64;
+
+typedef   signed CM_TYPE_INT8   schar8,   s_char8;
+typedef unsigned CM_TYPE_INT8   uchar8,   u_char8;
+typedef   signed CM_TYPE_INT16  sshort16, s_short16;
+typedef unsigned CM_TYPE_INT16  ushort16, u_short16;
+typedef   signed CM_TYPE_INT32  slong32,  s_long32;
+typedef unsigned CM_TYPE_INT32  ulong32,  u_long32;
+typedef   signed CM_TYPE_INT64  slong64,  s_long64;
+typedef unsigned CM_TYPE_INT64  ulong64,  u_long64;
 
 typedef float   float32, f32;
 typedef double  float64, f64;
@@ -138,16 +121,16 @@ typedef unsigned int u128      __attribute__((mode(TI)));
  * Fake Boolean Types
  *---------------------------------------------------------------------------*/
 #ifndef bool8
-#define bool8  int8
+#define bool8  CM_TYPE_INT8
 #endif
 #ifndef bool16
-#define bool16 int16
+#define bool16 CM_TYPE_INT16
 #endif
 #ifndef bool32
-#define bool32 int32
+#define bool32 CM_TYPE_INT32
 #endif
 #ifndef bool64
-#define bool64 int64
+#define bool64 CM_TYPE_INT64
 #endif
 
 #ifndef TRUE
@@ -210,7 +193,8 @@ typedef union union128 {
 #endif /* HASTYPE_FLOAT128 */
 } union128;
 
-/*---------------------------------------------------------------------------*
- * END OF FILE
- *---------------------------------------------------------------------------*/
-#endif /* INC_CMTYPES_H */
+/*---------------------------------------------------------------------------*/
+#endif /* END OF FILE */
+/*---------------------------------------------------------------------------*/
+/* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
+/* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=utf-8 : */
