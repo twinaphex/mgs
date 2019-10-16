@@ -39,7 +39,7 @@
      + BUILD_MGS4_JP \
      + BUILD_MGS4_SP \
      + BUILD_MGS4_US ) != 1 )
-#error "Config flag error!! Zero or >1 flags were defined."
+#error "Config flag error!! 0 or >1 flags were defined."
 #endif
 
 /*---------------------------------------------------------------------------*
