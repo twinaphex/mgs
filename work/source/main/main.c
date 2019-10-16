@@ -2,24 +2,16 @@
  * METAL GEAR SOLID
  * Startup Module
  */
+#include <sys/types.h>
 #include <libcd.h>
-#include <libgpu.h>
 #include <libgte.h>
+#include <libgpu.h>
 
 #include "mgs_global.h"
 #include "mgs_libs.h"
 
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
-
-//! manually inline if main() doesn't match as-is
-static inline void START_GAME( void(*proc)(void) )
-{
-	static long32 Stack[512];
-	
-	/* if DEBUG is undefind, mts_boot() will be called instead */
-	mts_boot_task( MTSID_GAME, proc, bottom(Stack), sizeof(Stack) );
-}
 
 static void Main( void )
 {
@@ -82,12 +74,14 @@ static void Main( void )
 	}
 }
 
-void main( void )
+int main()
 {
+	static long Stack[512];
+	
 #if ( MGS_PILOT_DISC1 )
 	printf( "start MGS\n" );
 #endif
-	START_GAME( Main );
+	mts_boot_task( MTSID_GAME, Main, bottom(Stack), sizeof(Stack) );
 }
 
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
