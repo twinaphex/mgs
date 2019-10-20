@@ -16,11 +16,11 @@
  * - Mutations of strings differing in only the last character will
  *   result in the lowest byte of the hash mirroring that difference.
  *
- *   Examples:
- *      GV_StrCode( "cb_box11" )  == 0xADDB
- *      GV_StrCode( "cb_box12" )  == 0xADDC
- *      GV_StrCode( "op_kcej_l" ) == 0x4349
- *      GV_StrCode( "op_kcej_r" ) == 0x434F
+ * Examples:
+ * - GV_StrCode( "cb_box11" )  == 0xADDB
+ * - GV_StrCode( "cb_box12" )  == 0xADDC
+ * - GV_StrCode( "op_kcej_l" ) == 0x4349
+ * - GV_StrCode( "op_kcej_r" ) == 0x434F
  */
 
 /* status: MATCH, opt: -O2, inst: OK, regs: OK */
