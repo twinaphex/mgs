@@ -18,6 +18,14 @@
 *.[Mm][Aa][Pp]
 *.[Ss][Yy][Mm]
 
+# MSVC Binaries
+#-------------------------
+*.[Oo][Bb][Jj]
+*.[Ll][Ii][Bb]
+*.[Ee][Xx][Ee]
+*.[Dd][Ll][Ll]
+*.[Pp][Dd][Bb]
+
 # IDA Database
 #-------------------------
 *.i64
