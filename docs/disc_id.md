@@ -12,7 +12,7 @@ SLPM-80254                                     | Apr.27,1998 | PlayStation | Jap
 [SLPM-86112][SLPM86112]                        | Jul.24,1998 | PlayStation | Japan                | Retail (Disc 2)
 [SCPS-45317][SCPS45317]                        | Jul.24,1998 | PlayStation | Asia                 | Retail (Disc 1)
 [SCPS-45318][SCPS45318]                        | Jul.24,1998 | PlayStation | Asia                 | Retail (Disc 2)
-SLUS-90035                                     | Aug.03,1998 | PlayStation | North America        | Demo
+[SLUS-90035][SLUS-90035]                       | Aug.03,1998 | PlayStation | North America        | Demo
 [SLED-01400][SLED01400]                        | Aug.04,1998 | PlayStation | Europe (English)     | Demo
 [SLUS-00594 v1.0][SLUS00594v10]                | Sep.09,1998 | PlayStation | North America        | Retail v1.0 (Disc 1)
 [SLUS-00776 v1.0][SLUS00776v10]                | Sep.09,1998 | PlayStation | North America        | Retail v1.0 (Disc 2)
@@ -48,6 +48,7 @@ X05-74005 [(US)][X0574005U], [(EU)][X0574005E] | Aug.29,2000 | Windows     | Nor
 [SLPM86112]: http://redump.org/disc/1394/
 [SCPS45317]: http://redump.org/disc/34111/
 [SCPS45318]: http://redump.org/disc/34112/
+[SLUS-90035]: http://redump.org/disc/43223/
 [SLED01400]: http://redump.org/disc/690/
 [SLUS00594v10]: http://redump.org/disc/102/
 [SLUS00776v10]: http://redump.org/disc/103/
