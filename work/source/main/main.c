@@ -7,6 +7,16 @@
 #include <libgte.h>
 #include <libgpu.h>
 
+/*
+ * "DEBUG" must be defined in order to call the correct MTS functions.
+ * If undefined, mts_boot_task() will be replaced by a call to mts_boot(),
+ * dropping the final argument (stack size), and mts_start_task() will not
+ * expand to call mts_set_stack_check().
+ */
+#ifndef DEBUG
+#define DEBUG
+#endif
+
 #include "mgs_global.h"
 #include "mgs_libs.h"
 
