@@ -55,11 +55,13 @@ static void Main( void )
 	HZD_StartDaemon();
 	
 	printf( "sound:" );
-	/* if DEBUG is undefind, mts_set_stack_check() won't be called */
-	mts_start_task( MTSID_SOUND_MAIN, SdMain, bottom(SdStack), sizeof(SdStack) );
+	mts_start_task(
+		MTSID_SOUND_MAIN,   /* task id    */
+		SdMain,             /* procedure  */
+		bottom(SdStack),    /* stack ptr  */
+		sizeof(SdStack) );  /* stack size */
 	
-	while ( !SdIntReady() )
-	{
+	while ( !SdIntReady() ){
 		mts_wait_vbl( 1 );
 	}
 	
@@ -68,8 +70,7 @@ static void Main( void )
 	
 	printf( "start\n" );
 	
-	while ( 1 )
-	{
+	while (1){
 		GV_ExecActorSystem();
 	}
 }
@@ -81,7 +82,11 @@ int main()
 #if ( MGS_PILOT_DISC1 )
 	printf( "start MGS\n" );
 #endif
-	mts_boot_task( MTSID_GAME, Main, bottom(Stack), sizeof(Stack) );
+	mts_boot_task(
+		MTSID_GAME,         /* task id    */
+		Main,               /* procedure  */
+		bottom(Stack),      /* stack ptr  */
+		sizeof(Stack) );    /* stack size */
 }
 
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
