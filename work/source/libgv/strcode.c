@@ -30,7 +30,7 @@ u_short GV_StrCode( char *string )
 	u_char *p = (u_char *)string;
 	u_short id = 0;
 	
-	while ( c = *p++ )
+	while (( c = *p++ ))
 	{
 		id = (( id >> 11 ) | ( id << 5 ));
 		id += c;
