@@ -13,7 +13,7 @@
 #ifndef MTS_NR_TASK
 #ifndef NEWMTS
 #define MTS_NR_TASK  64
-#else
+#else  /* NEWMTS */
 #define MTS_NR_TASK  12
 #endif /* NEWMTS */
 #endif /* MTS_NR_TASK */
@@ -239,7 +239,7 @@ void cprintf( char *format, ... );
 #define stderr -1
 #endif /* PSX */
 
-#endif /* INC_MTS_H */
+#endif /* END OF FILE */
 
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
 /* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */

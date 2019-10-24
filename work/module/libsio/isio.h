@@ -25,4 +25,4 @@ EXTERN void          sio_dump( unsigned char *, unsigned long );
 EXTERN int           sio_get_dsr( void );
 EXTERN int           sio_get_cts( void );
 
-#endif /* __ISIO_H__ */
+#endif /* END OF FILE */
