@@ -11,7 +11,7 @@
 #include "global.h"
 
 /*---------------------------------------------------------------------------*
- * GCL Structures (ref.SLPM86249:vr_fms01.bin, MGS4)
+ * GCL Structures (ref.SLPM86249:vr_fms01.bin, MGS4 2006.09.07)
  *---------------------------------------------------------------------------*/
 
 typedef int GCL_COMMANDFUNC(char *);
