@@ -5,8 +5,6 @@
 #ifndef INC_MGS_TYPES_H
 #define INC_MGS_TYPES_H
 
-#include <sys/types.h>
-#include "cmtypes.h"
 
 #endif /* INC_MGS_TYPES_H */
 

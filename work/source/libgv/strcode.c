@@ -2,7 +2,7 @@
  * [ LibGV ]
  * String Hash Function
  */
-#include "mgs_global.h"
+#include "global.h"
 
 /*
  * Warning:

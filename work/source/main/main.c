@@ -2,6 +2,7 @@
  * METAL GEAR SOLID
  * Startup Module
  */
+#include "global.h"
 #include <sys/types.h>
 #include <libcd.h>
 #include <libgte.h>
@@ -17,7 +18,6 @@
 #define DEBUG
 #endif
 
-#include "mgs_global.h"
 #include "mgs_libs.h"
 
 /* find stack bottom */

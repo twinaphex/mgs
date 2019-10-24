@@ -5,8 +5,6 @@
 #ifndef INC_KCEJ_TYPES_H
 #define INC_KCEJ_TYPES_H
 
-#include <sys/types.h>
-#include "cmtypes.h"
 
 #endif /* INC_KCEJ_TYPES_H */
 

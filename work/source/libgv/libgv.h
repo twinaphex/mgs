@@ -9,7 +9,7 @@
 #ifndef INC_LIBGV_H
 #define INC_LIBGV_H
 
-#include "mgs_global.h"
+#include "global.h"
 
 /* GV Daemon (gvd.c) */
 extern void GV_StartDaemon( void );

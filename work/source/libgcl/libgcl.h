@@ -8,7 +8,7 @@
 #ifndef INC_LIBGCL_H
 #define INC_LIBGCL_H
 
-#include "mgs_global.h"
+#include "global.h"
 
 /*---------------------------------------------------------------------------*
  * GCL Structures (ref.SLPM86249:vr_fms01.bin, MGS4)
