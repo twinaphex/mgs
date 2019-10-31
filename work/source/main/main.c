@@ -18,7 +18,16 @@
 #define DEBUG
 #endif
 
-#include "mgs_libs.h"
+#include "mts.h"
+#include "taskid.h"
+#include "sound.h"
+#include "libdg.h"
+#include "libfs.h"
+#include "libgcl.h"
+#include "libgv.h"
+#include "libhzd.h"
+#include "libmc.h"
+#include "game.h"
 
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
