@@ -3,6 +3,7 @@
  * String Hash Function
  */
 #include "global.h"
+#include <sys/types.h>
 
 /*
  * Warning:

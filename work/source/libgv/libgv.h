@@ -10,6 +10,7 @@
 #define INC_LIBGV_H
 
 #include "global.h"
+#include <sys/types.h>
 
 /* GV Daemon (gvd.c) */
 extern void GV_StartDaemon( void );
