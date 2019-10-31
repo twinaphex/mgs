@@ -33,10 +33,12 @@ typedef struct {
 } GCL_ARGS;
 
 /*---------------------------------------------------------------------------*
- * Endianness Conversion (ref.SLPM86249:vr_fms01.bin)
+ * ByteSwap Functions (ref.SLPM86249:vr_fms01.bin)
  *---------------------------------------------------------------------------*/
 
-/****** MEMLEAK START ******/
+	/*=========================*/
+	/*===== MEMLEAK START =====*/
+	/*=========================*/
 
 static inline long GCL_GetLong( char *ptr )
 {
@@ -57,7 +59,9 @@ static inline char GCL_GetByte( char *ptr )
 	return *ptr;
 }
 
-/****** MEMLEAK END ******/
+	/*=======================*/
+	/*===== MEMLEAK END =====*/
+	/*=======================*/
 
 /*---------------------------------------------------------------------------*
  * Prototypes
