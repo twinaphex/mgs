@@ -89,7 +89,7 @@ int main()
 {
 	static long32 Stack[512];
 	
-#if ( MGS_PILOT_DISC1 )
+#if ( PSX_PILOT_DISC1 )
 	printf( "start MGS\n" );
 #endif
 	mts_boot_task(
