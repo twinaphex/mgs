@@ -1,9 +1,9 @@
 /*
- * KCEJ West Libraries
+ * KCE Japan West
  * Common Definitions
  */
-#ifndef INC_KCEJ_DEFS_H
-#define INC_KCEJ_DEFS_H
+#ifndef INC_JPN_TYPES_H
+#define INC_JPN_TYPES_H
 
 
 
