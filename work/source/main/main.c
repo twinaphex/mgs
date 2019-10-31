@@ -8,12 +8,8 @@
 #include <libgte.h>
 #include <libgpu.h>
 
-/*
- * "DEBUG" must be defined in order to call the correct MTS functions.
- * If undefined, mts_boot_task() will be replaced by a call to mts_boot(),
- * dropping the final argument (stack size), and mts_start_task() will not
- * expand to call mts_set_stack_check().
- */
+// If DEBUG is undefined, mts_boot_task() will be replaced with a call
+// to mts_boot() and mts_start_task() will not call mts_set_stack_check().
 #ifndef DEBUG
 #define DEBUG
 #endif
@@ -80,7 +76,7 @@ static void Main( void )
 		bottom(SdStack),    /* stack ptr  */
 		sizeof(SdStack) );  /* stack size */
 	
-	while ( !SdIntReady() ){
+	while( !SdIntReady() ){
 		mts_wait_vbl( 1 );
 	}
 	
@@ -89,7 +85,7 @@ static void Main( void )
 	
 	printf( "start\n" );
 	
-	while (1){
+	while( 1 ){
 		GV_ExecActorSystem();
 	}
 }
