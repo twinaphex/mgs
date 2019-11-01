@@ -15,7 +15,7 @@
 /* GV Daemon (gvd.c) */
 extern void GV_StartDaemon( void );
 
-/* Actor Execution System (actor.c) */
+/* Actor System (actor.c) */
 extern void GV_ExecActorSystem( void );
 
 /* String Hash Function (strcode.c) */
