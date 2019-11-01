@@ -109,7 +109,7 @@ int main()
 	static long32 Stack[512];
 #endif
 	
-#if ( PSX_PILOT_DISC1 )
+#if (PSX_PILOT_DISC1)
 	printf( "start MGS\n" );
 #endif
 
