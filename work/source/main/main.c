@@ -28,7 +28,7 @@
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
 
-#if (0)
+#ifdef USE_INLINE_STARTUP
 static inline void START_GAME( void(*proc)(void) )
 {
 	static long32 Stack[512];
@@ -105,7 +105,7 @@ static void Main( void )
 
 int main()
 {
-#if (1)
+#ifndef USE_INLINE_STARTUP
 	static long32 Stack[512];
 #endif
 	
@@ -113,7 +113,7 @@ int main()
 	printf( "start MGS\n" );
 #endif
 
-#if (0)
+#ifdef USE_INLINE_STARTUP
 	START_GAME( Main );
 #else
 	mts_boot_task(
