@@ -28,19 +28,6 @@
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
 
-#ifdef USE_INLINE_STARTUP
-static inline void START_GAME( void(*proc)(void) )
-{
-	static long32 Stack[512];
-	
-	mts_boot_task(
-		MTSID_GAME,         /* task id    */
-		proc,               /* procedure  */
-		bottom(Stack),      /* stack ptr  */
-		sizeof(Stack) );    /* stack size */
-}
-#endif
-
 static void Main( void )
 {
 	RECT rect;
@@ -103,25 +90,24 @@ static void Main( void )
 	}
 }
 
+static inline void START_GAME( void(*proc)(void) )
+{
+	static long32 Stack[512];
+	
+	mts_boot_task(
+		MTSID_GAME,         /* task id    */
+		proc,               /* procedure  */
+		bottom(Stack),      /* stack ptr  */
+		sizeof(Stack) );    /* stack size */
+}
+
 int main()
 {
-#ifndef USE_INLINE_STARTUP
-	static long32 Stack[512];
-#endif
-	
 #if (PSX_PILOT_DISC1)
 	printf( "start MGS\n" );
 #endif
 
-#ifdef USE_INLINE_STARTUP
 	START_GAME( Main );
-#else
-	mts_boot_task(
-		MTSID_GAME,         /* task id    */
-		Main,               /* procedure  */
-		bottom(Stack),      /* stack ptr  */
-		sizeof(Stack) );    /* stack size */
-#endif
 }
 
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
