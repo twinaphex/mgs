@@ -1,6 +1,6 @@
 #
-# METAL GEAR SOLID
-# Test Makefile for "Main"
+# "METAL GEAR SOLID"
+# Test Makefile for main.c
 #
 
 TOP    = ../..
