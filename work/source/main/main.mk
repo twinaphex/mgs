@@ -9,7 +9,7 @@ MODULE = $(TOP)/module
 SOURCE = $(TOP)/source
 
 INCDIRS = \
--I$(COMMON)         \
+-I$(COMMON)/include \
 -I$(MODULE)/include \
 -I$(MODULE)/libsio  \
 -I$(MODULE)/mts     \
