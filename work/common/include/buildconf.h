@@ -33,12 +33,12 @@
      + BUILD_MGS_WIN32_INTEGRAL \
      + BUILD_MGS_WIN32_VRONLY \
      + BUILD_MGS_WIN32_DEMO0 \
-     + BUILD_MGS4_FR \
-     + BUILD_MGS4_GR \
-     + BUILD_MGS4_IT \
-     + BUILD_MGS4_JP \
-     + BUILD_MGS4_SP \
-     + BUILD_MGS4_US ) != 1 )
+     + BUILD_PSX_MGS4_FR \
+     + BUILD_PSX_MGS4_GR \
+     + BUILD_PSX_MGS4_IT \
+     + BUILD_PSX_MGS4_JP \
+     + BUILD_PSX_MGS4_SP \
+     + BUILD_PSX_MGS4_US ) != 1 )
 #error "Config flag error!! 0 or >1 flags were defined."
 #endif
 
