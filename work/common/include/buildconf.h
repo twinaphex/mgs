@@ -52,11 +52,11 @@
 #define PSX_USA_v10         BUILD_SLUS00594_v10 // Sep.09,1998 ver.1.0
 #define PSX_USA_v11         BUILD_SLUS00594_v11 // Sep.16,1998 ver.1.1
 #define PSX_PAL_EN          BUILD_SLES01370     // Nov.19,1998 English
-#define PSX_PAL_DE          BUILD_SLES01507     // Nov.30,1998 German
+#define PSX_PAL_GR          BUILD_SLES01507     // Nov.30,1998 German
 #define PSX_PAL_FR          BUILD_SLES01506     // Dec.28,1998 French
 #define PSX_PAL_IT          BUILD_SLES01508     // Feb.09,1999 Italian
-#define PSX_PAL_ES_v10      BUILD_SLES01734_v10 // Apr.05,1999 Spanish ver.1.0
-#define PSX_PAL_ES_v11      BUILD_SLES01734_v11 // Jul.15,1999 Spanish ver.1.1
+#define PSX_PAL_SP_v10      BUILD_SLES01734_v10 // Apr.05,1999 Spanish ver.1.0
+#define PSX_PAL_SP_v11      BUILD_SLES01734_v11 // Jul.15,1999 Spanish ver.1.1
 
 /* --- METAL GEAR SOLID PILOT DISC --- */
 
