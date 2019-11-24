@@ -48,26 +48,13 @@ static void Main( void )
 	mts_init_vsync();
 	mts_set_vsync_task();
 	
-	printf( "mem:" );
-	MC_StartDaemon();
-	
-	printf( "pad:" );
-	mts_init_controller();
-	
-	printf( "gv:" );
-	GV_StartDaemon();
-	
-	printf( "fs:" );
-	FS_StartDaemon();
-	
-	printf( "dg:" );
-	DG_StartDaemon();
-	
-	printf( "gcl:" );
-	GCL_StartDaemon();
-	
-	printf( "hzd:" );
-	HZD_StartDaemon();
+	printf( "mem:" ); MC_StartDaemon();
+	printf( "pad:" ); mts_init_controller();
+	printf( "gv:"  ); GV_StartDaemon();
+	printf( "fs:"  ); FS_StartDaemon();
+	printf( "dg:"  ); DG_StartDaemon();
+	printf( "gcl:" ); GCL_StartDaemon();
+	printf( "hzd:" ); HZD_StartDaemon();
 	
 	printf( "sound:" );
 	mts_start_task(
@@ -80,8 +67,7 @@ static void Main( void )
 		mts_wait_vbl( 1 );
 	}
 	
-	printf( "gm:" );
-	GM_StartDaemon();
+	printf( "gm:" ); GM_StartDaemon();
 	
 	printf( "start\n" );
 	
