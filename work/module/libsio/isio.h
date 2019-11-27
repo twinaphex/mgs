@@ -26,3 +26,6 @@ EXTERN int           sio_get_dsr( void );
 EXTERN int           sio_get_cts( void );
 
 #endif /* END OF FILE */
+
+/* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
+/* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
