@@ -32,8 +32,9 @@
      + BUILD_PSX_MGS4_IT \
      + BUILD_PSX_MGS4_JP \
      + BUILD_PSX_MGS4_SP \
-     + BUILD_PSX_MGS4_US ) != 1 )
-#error "Config flag error!! 0 or >1 flags were defined."
+     + BUILD_PSX_MGS4_US \
+     + BUILD_NEW ) != 1 )
+#error "ERROR: 0 or >1 config flags defined."
 #endif
 
 /*---------------------------------------------------------------------------*
