@@ -44,12 +44,12 @@ typedef unsigned long MTS_STACK;
 
 extern void mts_boot( int tasknr, void (*procedure)(void), void *stack_pointer );
 extern void mts_send( int dst, unsigned char *message );
-/* extern void mts_isend( int dst ); */
+/*extern void mts_isend( int dst );*/
 extern int  mts_isend( int dst );
 extern int  mts_receive( int src, unsigned char *message );
 extern void mts_reschedule( void );
 
-#if 0 /* UNUSED */
+#if (0)
 extern void mts_lock( void );
 extern void mts_unlock( void );
 #else
@@ -227,10 +227,9 @@ void set_output_stream( long stream );
 #define sio_output_start()  set_output_stream( 0 );
 
 #ifdef PSX
-/* MTS printf functions */
 void fprintf( long stream, char *format, ... );
-void printf( char *format, ... );
-void cprintf( char *format, ... );
+void printf( char *format, ... );  /* added for MGS */
+void cprintf( char *format, ... ); /* added for MGS */
 #endif /* PSX */
 
 #endif /* __IN_MTS_NEW__ */
@@ -239,7 +238,8 @@ void cprintf( char *format, ... );
 #define stderr -1
 #endif /* PSX */
 
+/*---------------------------------------------------------------------------*/
 #endif /* END OF FILE */
-
+/*---------------------------------------------------------------------------*/
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
 /* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
