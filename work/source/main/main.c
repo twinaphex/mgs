@@ -11,7 +11,7 @@
 // If DEBUG is undefined, mts_boot_task() will be replaced with a call
 // to mts_boot() and mts_start_task() will not call mts_set_stack_check().
 #ifndef DEBUG
-#define DEBUG
+#define DEBUG 1
 #endif
 
 #include "mts.h"
