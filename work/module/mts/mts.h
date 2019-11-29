@@ -78,7 +78,7 @@ extern void mts_set_exception_func( void (*func)(void) );
 extern void mts_print_memmap( void );
 extern void mts_check_memmap( void );
 extern void mts_get_use_stack_size( long *max, long *now, long *limit );
-#else
+#else /* DEBUG */
 #define mts_print_process_status()
 #define mts_set_stack_check( a, b, c )
 #define mts_set_exception_func( a )
@@ -165,7 +165,7 @@ extern void *mts_memory_check( char *file, long line, void *ptr );
 #define MTS_MEMORY_CHECK( _ptr )\
         mts_memory_check( __FILE__, __LINE__, _ptr )
 
-#else
+#else /* DEBUG */
 
 #define MTS_SET_MEMORY_FENCE( _blocktop )
 #define MTS_SET_MEMORY_FENCE_ARRAY( _blocktop, _blocksize )
