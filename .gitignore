@@ -3,18 +3,17 @@
 .vscode
 .vs
 
-# PSX Binaries
+# PSX SDevTC Output
 #-------------------------
 *.[Oo][Bb][Jj]
 *.[Ll][Ii][Bb]
 *.[Bb][Ii][Nn]
 *.[Cc][Pp][Ee]
 *.[Ee][Xx][Ee]
-*.[Ll][Nn][Kk]
 *.[Mm][Aa][Pp]
 *.[Ss][Yy][Mm]
 
-# MSVC Binaries
+# MSVC Win32 Output
 #-------------------------
 *.[Oo][Bb][Jj]
 *.[Ll][Ii][Bb]
