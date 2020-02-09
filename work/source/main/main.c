@@ -8,8 +8,9 @@
 #include <libgte.h>
 #include <libgpu.h>
 
-// If DEBUG is undefined, mts_boot_task() will be replaced with a call
-// to mts_boot() and mts_start_task() will not call mts_set_stack_check().
+// Needed for mts.h DEBUG-dependent definitions. If undefined:
+// - mts_boot_task() will be replaced with a call to mts_boot()
+// - mts_start_task() will not call mts_set_stack_check()
 #ifndef DEBUG
 #define DEBUG 1
 #endif
@@ -28,10 +29,12 @@
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
 
-static void Main( void )
+/*---------------------------------------------------------------------------*/
+
+static void MGS( void )
 {
 	RECT rect;
-	static long32 SdStack[512];
+	static long32 SdStack[512]; /* 2KB */
 	
 	ResetGraph( 0 );
 	SetGraphDebug( 0 );
@@ -76,9 +79,11 @@ static void Main( void )
 	}
 }
 
+/*---------------------------------------------------------------------------*/
+
 static inline void START_GAME( void(*proc)(void) )
 {
-	static long32 Stack[512];
+	static long32 Stack[512]; /* 2KB */
 	
 	mts_boot_task(
 		MTSID_GAME,         /* task id    */
@@ -87,14 +92,18 @@ static inline void START_GAME( void(*proc)(void) )
 		sizeof(Stack) );    /* stack size */
 }
 
+/*---------------------------------------------------------------------------*/
+
 int main()
 {
 #if (PSX_PILOT_DISC1)
 	printf( "start MGS\n" );
 #endif
-
-	START_GAME( Main );
+	START_GAME( MGS );
 }
 
+/*---------------------------------------------------------------------------*
+ * END OF FILE
+ *---------------------------------------------------------------------------*/
 /* -*- indent-tabs-mode: t; tab-width: 4; mode: c; -*- */
 /* vim: set noet ts=4 sw=4 ft=c ff=dos fenc=euc-jp : */
