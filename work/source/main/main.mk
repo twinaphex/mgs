@@ -11,23 +11,11 @@ SOURCE = $(TOP)/source
 INCDIRS = \
 -I$(COMMON)/include \
 -I$(MODULE)/include \
--I$(MODULE)/libsio  \
--I$(MODULE)/mts     \
--I$(MODULE)/sound   \
--I$(SOURCE)/include \
--I$(SOURCE)/game    \
--I$(SOURCE)/font    \
--I$(SOURCE)/libdg   \
--I$(SOURCE)/libfs   \
--I$(SOURCE)/libgcl  \
--I$(SOURCE)/libgv   \
--I$(SOURCE)/libhzd  \
--I$(SOURCE)/libmc
+-I$(SOURCE)/include
 
-BUILDFLAG = SLPM86247
-BUILDCONF = -DBUILD_$(BUILDFLAG)
+VERSION ?= SLPM86247
 
-DEFINES = $(BUILDCONF) -DDEBUG -DPSX
+DEFINES = -DBUILD_$(VERSION) -DDEBUG -DPSX
 CFLAGS  = -Wall -O2 -c $(INCDIRS) $(DEFINES)
 
 all: psx

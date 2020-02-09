@@ -15,16 +15,16 @@
 #define DEBUG 1
 #endif
 
-#include "mts.h"
-#include "taskid.h"
-#include "sound.h"
-#include "libdg.h"
-#include "libfs.h"
-#include "libgcl.h"
-#include "libgv.h"
-#include "libhzd.h"
-#include "libmc.h"
-#include "game.h"
+#include "../../module/mts/mts.h"
+#include "../../module/mts/taskid.h"
+#include "../../module/sound/sound.h"
+#include "../libgv/libgv.h"
+#include "../libfs/libfs.h"
+#include "../libdg/libdg.h"
+#include "../libgcl/libgcl.h"
+#include "../libhzd/libhzd.h"
+#include "../libmc/libmc.h"
+#include "../game/game.h"
 
 /* find stack bottom */
 #define bottom(s)  ((void *)(s) + sizeof(s))
