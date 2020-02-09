@@ -1,9 +1,7 @@
 /*
  * [ LibGCL ]
  * Game Command Language
- * Script Interpreter Library
- *
- * ver.METAL GEAR SOLID
+ * Interpreter Library
  */
 #ifndef INC_LIBGCL_H
 #define INC_LIBGCL_H
@@ -11,8 +9,11 @@
 #include "global.h"
 
 /*---------------------------------------------------------------------------*
- * GCL Structures (ref.SLPM86249:vr_fms01.bin, MGS4 2006.09.07)
+ * Common Types
  *---------------------------------------------------------------------------*/
+
+// ref.SLPM86249:vr_fms01.bin
+// ref.MGS4 (2006.09.07 builds)
 
 typedef int GCL_COMMANDFUNC(char *);
 
@@ -33,12 +34,13 @@ typedef struct {
 } GCL_ARGS;
 
 /*---------------------------------------------------------------------------*
- * ByteSwap Functions (ref.SLPM86249:vr_fms01.bin)
+ * Inline Functions
  *---------------------------------------------------------------------------*/
 
-	/*=========================*/
-	/*===== MEMLEAK START =====*/
-	/*=========================*/
+// ref.SLPM86249:vr_fms01.bin
+/* =========================== */
+/* ***** START QUOTATION ***** */
+/* =========================== */
 
 static inline long GCL_GetLong( char *ptr )
 {
@@ -59,9 +61,9 @@ static inline char GCL_GetByte( char *ptr )
 	return *ptr;
 }
 
-	/*=======================*/
-	/*===== MEMLEAK END =====*/
-	/*=======================*/
+/* ========================= */
+/* ***** END QUOTATION ***** */
+/* ========================= */
 
 /*---------------------------------------------------------------------------*
  * Prototypes

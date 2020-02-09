@@ -24,7 +24,7 @@
  * - GV_StrCode( "op_kcej_r" ) == 0x434F
  */
 
-/* status: MATCH, opt: -O2, inst: OK, regs: OK */
+/* status: MATCH, opt: -O2 */
 u_short GV_StrCode( char *string )
 {
 	u_char c;
