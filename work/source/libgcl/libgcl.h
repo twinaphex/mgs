@@ -70,7 +70,7 @@ static inline char GCL_GetByte( char *ptr )
  *---------------------------------------------------------------------------*/
 
 /* GCL Daemon (gcl_init.c) */
-void GCL_StartDaemon( void );
+extern void GCL_StartDaemon( void );
 
 /*---------------------------------------------------------------------------*/
 #endif /* END OF FILE */
