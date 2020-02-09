@@ -1,10 +1,10 @@
 /*
- * New Multi-Task Scheduler for PSX
+ * Multi-Task Scheduler for PSX ver2.02
  * Task ID Definition
  *
  * ref. beatmania APPEND 5thMIX
- *  1998.04.08 : work.5th/include/task_id.h
- *  1998.05.12 : work.5th/libfs/taskid.h
+ *  1998.04.08 :: work.5th/include/task_id.h
+ *  1998.05.12 :: work.5th/libfs/taskid.h
  */
 #ifndef INC_TASKID_H
 #define INC_TASKID_H

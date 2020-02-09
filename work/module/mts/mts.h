@@ -1,9 +1,9 @@
 /*
- * New Multi-Task Scheduler for PSX
+ * Multi-Task Scheduler for PSX ver2.02
  * Global Incldue
  *
  * ref. beatmania APPEND 5thMIX
- *  1999.10.04 : work.5th/include/mts.h
+ *  1999.10.04 :: work.5th/include/mts.h
  */
 #ifndef INC_MTS_H
 #define INC_MTS_H

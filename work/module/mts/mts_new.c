@@ -1,5 +1,5 @@
 /*
- * New Multi-Task Scheduler for PSX
+ * Multi-Task Scheduler for PSX ver2.02
  */
 #include "global.h"
 #include "mts.h"
