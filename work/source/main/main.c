@@ -48,7 +48,7 @@ static void Main( void )
 	mts_init_vsync();
 	mts_set_vsync_task();
 	
-	printf( "mem:" ); MC_StartDaemon();
+	printf( "mem:" ); memcard_init();
 	printf( "pad:" ); mts_init_controller();
 	printf( "gv:"  ); GV_StartDaemon();
 	printf( "fs:"  ); FS_StartDaemon();
