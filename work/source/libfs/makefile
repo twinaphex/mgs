@@ -1,9 +1,9 @@
 #
 # Makefile for LibFS
-# ver.METAL GEAR SOLID
 #
-# ref. beatmania APPEND 5thMIX
-#  1998.06.19 : work.5th/libfs/makefile
+# ver."METAL GEAR SOLID"
+# ref."beatmania APPEND 5thMIX"
+#  work.5th/libfs/makefile (Jun.19,1998)
 #
 
 #---------------------- Rules and defines
@@ -36,8 +36,8 @@ ${TRGPSX}: ${OBJPSX} makefile
 	-rm $@
 #	psylib /a $@ ${OBJPSX1} > NUL
 #	psylib /a $@ ${OBJPSX2} > NUL
-	psylib /a $@ ${OBJPSX1}
-	psylib /a $@ ${OBJPSX2}
+	psylib //a $@ ${OBJPSX1}
+	psylib //a $@ ${OBJPSX2}
 
 $(SELECTOBJS) : select.c file.cnf
 #$(SELECTOBJS) : select.c
