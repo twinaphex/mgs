@@ -2,8 +2,9 @@
  * Internal SIO Driver for PSX
  * (interrupt version)
  *
- * ref. beatmania APPEND 5thMIX
- *  1998.04.06 :: work.5th/include/isio.h
+ * ver."METAL GEAR SOLID"
+ * ref."beatmania APPEND 5thMIX"
+ *  work.5th/include/isio.h (Apr.06,1998)
  */
 #ifndef __ISIO_H__
 #define __ISIO_H__

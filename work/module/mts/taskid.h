@@ -2,9 +2,10 @@
  * Multi-Task Scheduler for PSX ver2.02
  * Task ID Definition
  *
- * ref. beatmania APPEND 5thMIX
- *  1998.04.08 :: work.5th/include/task_id.h
- *  1998.05.12 :: work.5th/libfs/taskid.h
+ * ver."METAL GEAR SOLID"
+ * ref."beatmania APPEND 5thMIX"
+ *  work.5th/include/task_id.h (Apr.08,1998)
+ *  work.5th/libfs/taskid.h (May.12,1998)
  */
 #ifndef INC_TASKID_H
 #define INC_TASKID_H
@@ -16,11 +17,11 @@
 #define MTSID_SOUND_DUMMY  4
 #define MTSID_SOUND_MAIN   5
 
-/* 1998.04.08 */
+/* --- Apr.08,1998 --- */
 #define MTSID_CD_READ      6
 #define MTSID_MEMORY_CARD  7
 
-/* 1998.05.12 */
+/* --- May.12,1998 --- */
 #define MTSID_CD_SYSTEM    6
 #define MTSID_MEMCARD      8
 

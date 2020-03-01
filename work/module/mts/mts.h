@@ -2,8 +2,9 @@
  * Multi-Task Scheduler for PSX ver2.02
  * Global Incldue
  *
- * ref. beatmania APPEND 5thMIX
- *  1999.10.04 :: work.5th/include/mts.h
+ * ver."METAL GEAR SOLID"
+ * ref."beatmania APPEND 5thMIX"
+ *  work.5th/include/mts.h (Oct.04,1999)
  */
 #ifndef INC_MTS_H
 #define INC_MTS_H
