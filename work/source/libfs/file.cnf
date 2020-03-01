@@ -1,0 +1,30 @@
+/*
+ * File Config Info for LibFS
+ *
+ * ver."METAL GEAR SOLID"
+ * ref."beatmania APPEND 5thMIX"
+ *  work.5th/libfs/file.cnf (Nov.11,1997)
+ */
+
+/*
+ * CDから読み出すファイル
+ */
+FS_FILE_INFO fs_file_info[] = {
+#ifdef OLD_LIBFS_FILECNF
+	{ "STAGE.DIR"  , 0 },
+	{ "RADIO.DAT"  , 0 },
+	{ "DEMO.DAT"   , 0 },
+	{ "ZMOVIE.STR" , 1 },
+	{ "FACE.DAT"   , 0 },
+	{ NULL         , 0 }
+#else
+	{ "STAGE.DIR"  , 0 },
+	{ "RADIO.DAT"  , 0 },
+	{ "FACE.DAT"   , 0 },
+	{ "ZMOVIE.STR" , 0 },
+	{ "VOX.DAT"    , 0 },
+	{ "DEMO.DAT"   , 0 },
+	{ "BRF.DAT"    , 0 },
+	{ NULL         , 0 }
+#endif
+};
